@@ -1,0 +1,41 @@
+
+package Main;
+
+import java.util.Scanner;
+
+public class Taller {
+    public static void main(String[] args) {
+        Scanner entrada=new Scanner(System.in);
+     
+        
+        int i, j, aux, elementos ;
+    
+        System.out.println("Digite los elementos de la matriz: ");
+        elementos = entrada.nextInt();
+         int a[]=new int [elementos];
+        
+        
+        for (i = 0; i < elementos; i++) {
+            System.out.println("Digite un numero en la posicion [" + i + "] = ");
+            a[i] = entrada.nextInt();
+            
+        }
+        for (i = 0; i < elementos; i++) {
+            for (j = 0; j < elementos; j++) {
+                if (a[j] > a[j + 1]) {
+
+                    aux = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = aux;
+                }
+            }
+        }
+
+        for (i = 0; i < elementos; i++) {
+            System.out.println(a[i]);
+        }
+
+    }
+
+    
+}
