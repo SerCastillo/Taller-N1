@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main(){
+	int i,j,aux,elementos,n;
+	int a[100];
+	printf("Digite los elementos de la matriz: ");scanf("%i",&elementos);
+	for(i=0;i<elementos;i++){
+		printf("Digite un numero en la posicion [%i]= ",i);scanf("%i",&a[i]);
+	}
+	for(i=0;i<elementos;i++){
+		for(j=0;j<5;j++){
+			if(a[j]>a[j+1]){
+			
+				aux=a[j];
+				a[j]=a[j+1];
+				a[j+1]=aux;
+			}
+		}
+	}
+	
+	for(i=0;i<elementos;i++){
+		printf("%i ",a[i]);
+	}
+	
+	
+	return 0;
+	
+}
