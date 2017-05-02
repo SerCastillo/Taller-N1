@@ -1,0 +1,50 @@
+#include <stdio.h>
+int main() {
+		int sup,mitad,inf,numero,valor,n,i;
+	int a[i];
+		char aux ='F';
+
+	printf("¿Cuantos elementos desea en el arreglo?   ");
+			scanf("%i",&n);
+		for(i=0;i<n;i++){
+			printf("Tamaño de la matriz [%i] = ",i);
+			scanf("%i",&a[i]);
+		}
+		
+		printf("Numero que desea buscar = ");
+		scanf("%i",&numero);
+		
+		
+		inf=0;
+		sup=n;
+	
+	
+		while(inf <= sup){
+			mitad = (inf+sup)/2;	
+			if(a[mitad]==numero){
+				aux='V';
+				break;
+			}
+			
+				if(a[mitad]<numero){
+					inf=mitad;
+					mitad=(inf+sup)/2;
+				}
+					if(a[mitad]>numero){
+					sup=mitad;
+					mitad=(inf+sup)/2;
+					}
+			
+				
+		}
+		if(aux =='F'){
+			printf("El numero no esta.");
+	
+		}
+		
+		else if(aux=='V'){
+			printf("En numero existe, en la posicion: %i",mitad);
+		}
+	 
+		return 0;
+}
