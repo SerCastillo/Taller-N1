@@ -1,0 +1,31 @@
+ public void insercion() {
+        Scanner entrada=new Scanner(System.in);
+        //Ordenamiento por Insercion
+
+        int i, j, aux, t;
+
+        System.out.println("Tamaño del array: ");t=entrada.nextInt();
+        
+        int []a=new int [t];
+	for (i = 0; i < t; i++) {
+            System.out.println("Digite numero en la posicion "+i+": ");a[i]=entrada.nextInt();
+          
+        }
+
+        for (i = 0; i < t; i++) {
+            j = i;
+            aux = a[i];
+            while ((j > 0) && (aux < a[j - 1])) {
+                a[j] = a[j - 1];
+                j--;
+            }
+            a[j] = aux;
+        }
+
+        for (i = 0; i < t; i++) {
+            System.out.println(a[i]);
+        }
+
+     
+
+    }
