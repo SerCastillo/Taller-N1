@@ -1,0 +1,36 @@
+public class BusquedaBinaria {
+
+    public static void main(String[] args) {
+
+        int sup, mitad = 0, inf, numero;
+        int a[] = {1, 2, 3, 4, 5};
+        char aux = 'F';
+        numero = 4;
+        inf = 0;
+        sup = 5;
+        System.out.println("Digite un numero: ");numero=entrada.nextInt();
+        while (inf <= sup) {
+            mitad = (inf + sup) / 2;
+            if (a[mitad] == numero) {
+                aux = 'V';
+                break;
+            }
+
+            if (a[mitad] < numero) {
+                inf = mitad;
+                mitad = (inf + sup) / 2;
+            }
+            if (a[mitad] > numero) {
+                sup = mitad;
+                mitad = (inf + sup) / 2;
+            }
+
+        }
+        if (aux == 'F') {
+            System.out.println("El numero no esta en el arreglo");
+        } else if (aux == 'V') {
+            System.out.println("En numero existe, en la posicion:" + mitad);
+        }
+
+    }
+}
