@@ -1,0 +1,32 @@
+public class SeleccionMetodo {
+
+    public void seleccion() {
+        Scanner entrada = new Scanner(System.in);
+
+        int i, j, min, temp, t;
+        System.out.println("Digite tamaño del arreglo:");
+        t = entrada.nextInt();
+        int[] a = new int[t];
+        for (i = 0; i < t; i++) {
+            System.out.println("Numero en la posicion " + i + ": ");
+            a[i] = entrada.nextInt();
+        }
+        for (i = 0; i < t; i++) {
+            min = i;
+            for (j = i + 1; j <= t; j++) {
+                if (a[j] < a[min]) {
+                    min = j;
+                }
+            }
+            temp = a[i];
+            a[i] = a[min];
+            a[min] = temp;
+        }
+
+        for (i = 0; i < t; i++) {
+            System.out.println(a[i]);
+        }
+
+    }
+
+}
