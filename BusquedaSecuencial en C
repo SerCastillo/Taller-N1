@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main(){
+	  int numero,i;
+	    int a[5]={5,7,8,9,6};
+	  char aux='F';
+	  numero=9;
+	
+	  i=0;
+	  while((aux=='F')&&(i<5)){
+		  if (a[i]==numero){
+			  aux='V';
+		  }
+		  i++;
+	  }
+	    if(aux=='F'){
+		    printf("El numero no existe dentro del arreglo.");
+	    }
+	   if(aux=='V'){
+		    printf("El numero existe, en la posicion: %i ",i-1);
+	   }
+	
+  return 0;
+	
+}
