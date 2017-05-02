@@ -1,0 +1,25 @@
+public class BusquedaSecuencial {
+
+    public static void main(String[] args) {
+        Scanner entrada=new Scanner(System.in);
+        int numero, i;
+        int a[]={5,7,8,9,6};
+        char aux = 'F';
+        System.out.println("Digite el numero:");numero=entrada.nextInt();
+
+        i = 0;
+        while ((aux == 'F') && (i < 5)) {
+            if (a[i] == numero) {
+                aux = 'V';
+            }
+            i++;
+        }
+        if (aux == 'F') {
+            System.out.println("El numero no existe dentro del arreglo.");
+        }
+        if (aux == 'V') {
+            System.out.println ("El numero existe");
+        }
+
+    }
+}
