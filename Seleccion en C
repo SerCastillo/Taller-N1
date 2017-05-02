@@ -1,0 +1,32 @@
+//Ordenamiento por Seleccion
+
+#include<stdio.h>
+#include<conio.h>
+
+int main(){
+	
+	int i,j,min,temp,t;
+	printf("Digite tamaño del arreglo: ");scanf("%i",&t);
+	int a[t];
+	for(i=0;i<t;i++){
+		printf("Numero en la posicion %i: ",i);scanf("%i",&a[i]);
+	}
+	for(i=0;i<t;i++){
+		min = i;
+		for(j=i+1;j<=t;j++){
+			if(a[j] < a[min]){
+				min = j;
+			}
+		}
+		temp = a[i];
+		a[i] = a[min];
+		a[min] = temp;
+	}
+	
+	for(i=0;i<t;i++){
+		printf("%i ",a[i]);
+	}
+	
+	getch();
+	return 0;
+}
