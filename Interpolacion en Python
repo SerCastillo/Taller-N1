@@ -1,0 +1,32 @@
+def interpolationSearch(self, array, data):
+lower = 0
+
+higher = len( array ) - 1
+
+index = -1
+
+while True:
+
+if lower >= higher or array[lower] == array[higher]:
+
+break
+
+middle = lower + ((higher - lower)
+
+/ (array[higher] - array[lower])) * (data - array[lower])
+
+if array[middle] == data:
+
+index = middle
+
+break
+
+else:
+
+if array[middle] < data:
+
+lower = middle + 1
+
+elif array[middle] > data:
+
+higher = middle - 
