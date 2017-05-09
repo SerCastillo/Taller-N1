@@ -1,0 +1,54 @@
+#include<stdio.h>
+
+#define MAX 10
+
+int list[MAX] = { 10, 14, 19, 26, 27, 31, 33, 35, 42, 44 };
+
+int find(int data) {
+int datin = 0;
+int datfi = MAX - 1;
+int mid = -1;
+int comparacion = 1;
+int index = -1;
+
+while(datin <= datfi) {
+printf("\nComparacion %d \n" , comparacion ) ;
+printf("datin : %d, lista[%d] = %d\n", datin, datin, list[datin]);
+printf("datfi : %d, lista[%d] = %d\n", datfi, datfi, list[datfi]);
+
+  comparacion++;
+
+
+  mid = datin + (((double)(datfi - datin) / (list[datfi] - list[datin])) * (data - list[datin]));
+  printf("mid = %d\n",mid);
+
+
+  if(list[mid] == data) {
+     index = mid;
+     break;
+  } else {
+     if(list[mid] < data) {
+        
+        datin = mid + 1;
+     } else {
+       
+        datfi = mid - 1;
+     }
+  }               
+
+}
+
+return index;
+}
+
+int main() {
+
+int location = find(19);
+
+if(location != -1)
+printf("\nSe encuentre en la posicion: %d" ,(location+1));
+else
+printf("Elemento no encontrado.");
+
+return 0;
+}
