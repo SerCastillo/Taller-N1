@@ -14,7 +14,7 @@ scanf("%d",&x[i]);
 
 quicksort(x,0,size-1);
 
-printf("Elementos Arreglados: ");
+printf("Elementos Ordenados: ");
 for(i=0;i<size;i++)
 printf(" %d",x[i]);
 
